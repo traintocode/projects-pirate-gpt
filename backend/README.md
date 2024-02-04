@@ -39,8 +39,35 @@ npm install
 
 3. Deploy the backend to your AWS account
 ```sh
-sls deploy --stage prod`
+sls deploy --stage prod
 ```
+
+4. Note down the **endpoint** url that is created for the new AWS Lambda function, the endpoint url will look like this `https://xxxxxxxxxxxxxxxxx.lambda-url.eu-west-3.on.aws`.
+
+```sh
+$ sls deploy --stage prod
+Running "serverless" from node_modules
+
+Deploying ai-app-backend to stage prod (eu-west-3)
+Compiling with Typescript...
+Using local tsconfig.json - tsconfig.json
+Typescript compiled.
+
+✔ Service deployed to stack ai-app-backend (117s)
+
+endpoint: https://xxxxxxxxxxxxxxxxx.lambda-url.eu-west-3.on.aws/
+functions:
+  callchatgpt: ai-app-backend-prod-callchatgpt (23 MB)
+```
+
+Above is an example console output from running the `sls deploy --stage prod` command in step 3, with the endoint url of the created AWS Lambda function.
+
+## Deleting Your Resources
+
+You can check the status of your deployment, or delete everything created by navigating to [CloudFormation in the AWS Console](https://eu-west-3.console.aws.amazon.com/cloudformation/home) and looking for the stack named `ai-app-backend`
+
+![](screenshot-cloudformation.png)
+
 
 ## Debugging Locally
 
@@ -49,13 +76,7 @@ There is a local entry point [./debug.ts](./debug.ts) that you can run with a No
 
 ## Connecting The Front End
 
-After deploying your AWS Lambda function
-
-
-
-
-
-Once you have build and deployed the [back end code](../backend/README.md) to AWS Lambda and created a function URL, copy this url to your [App.tsx component](./src/App.tsx#L24)
+After followin the steps above to deploy your AWS Lambda function, add the `endpoint` url into the front end by copying the URL to your [App.tsx component](../frontend/src/App.tsx#L24)
 
 ```
     // NOTE: replace this url with the url of your lambda function once deployed:

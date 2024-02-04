@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: nodejs18.x
   stackName: ai-app-backend
-  region: eu-west-2
+  region: eu-west-3
   versionFunctions: false
   deploymentBucket: ${env:DEPLOY_BUCKET}
   environment:    
