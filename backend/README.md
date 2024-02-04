@@ -1,6 +1,6 @@
 # Backend for Pirate GPT Project
 
-This directory contains the front end for the **Pirate GPT Chatbot Project** at [traintocode.com/projects/pirate-gpt](https://traintocode.com/projects/pirate-gpt/).  The back end consists of one [AWS Lambda](https://aws.amazon.com/lambda/) function written in Typescript and called with an HTTP request to the [function URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html).  [Serverless Framework](https://www.serverless.com/) is used to simplify the deployment process.
+This directory contains the back end for the **Pirate GPT Chatbot Project** at [traintocode.com/projects/pirate-gpt](https://traintocode.com/projects/pirate-gpt/).  The back end consists of one [AWS Lambda](https://aws.amazon.com/lambda/) function written in Typescript and called with an HTTP request to the [function URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html).  [Serverless Framework](https://www.serverless.com/) is used to simplify the deployment process.
 
 ## Prerequisites
 
