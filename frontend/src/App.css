@@ -1,21 +1,28 @@
 .message {
-  border-radius: 5px;
-  padding: 0.5em;
-
+    border-radius: 5px;
+    padding: 0.5em;
+    --message-color-ai: #d9dede;
+    --message-color-user: #F95738;
 }
 
 .message.ai {
-  background-color: darkslategrey;
-  margin-right: 2em;
+    background-color: var(--message-color-ai);
 }
 
 .message.user {
-  background-color: darkolivegreen;
-  margin-left: 2em;
+    background-color: var(--message-color-user);
+    color: white;
+    margin-left: 2em;
 }
 
-form.vertical {
-  display: flex;
-  justify-content: space-between;
+.input-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
+.input-form input[type='text'] {
+    margin-right: 1rem;
+    flex-grow: 1;
+    line-height: 2;
+}
